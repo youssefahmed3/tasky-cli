@@ -42,8 +42,8 @@ A simple and interactive command-line To-Do application built with Node.js. This
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/youssefahmed3/task-cli-app.git
-cd task-cli-app
+git clone https://github.com/youssefahmed3/tasky-cli.git
+cd tasky-cli-app
 ```
 ### 2. Install All The Dependencies 
 
