@@ -1,7 +1,7 @@
 import db from "../db/connection.js";
 import inquirer from "inquirer";
 import { logError, logSuccess } from "../utils/logger.js";
-
+import { spinner } from "../utils/logger.js";
 export async function deleteTask() {
   const todos = db.data.todos;
 

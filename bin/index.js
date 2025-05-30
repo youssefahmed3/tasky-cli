@@ -5,6 +5,7 @@ import { addTask } from "../src/commands/addTask.js";
 import { listTasks } from "../src/commands/listTasks.js";
 import { completeTask } from "../src/commands/completeTask.js";
 import { deleteTask } from "../src/commands/deleteTask.js";
+import { clearAllCompletedTasks } from "../src/commands/clearAllCompletedTasks.js";
 async function main() {
   await showBanner();
 
@@ -18,6 +19,7 @@ async function main() {
           "Add Task",
           "List Tasks",
           "Complete Task",
+          "Clear All Completed Tasks",
           "Delete Task",
           "Exit",
         ],
@@ -47,6 +49,22 @@ async function main() {
       case "Complete Task":
         while (true) {
           await completeTask();
+
+          const { back } = await inquirer.prompt([
+            {
+              type: "confirm",
+              name: "back",
+              message: "Return to main menu?",
+              default: true,
+            },
+          ]);
+
+          if (back) break;
+        }
+        break;
+      case "Clear All Completed Tasks":
+        while (true) {
+          await clearAllCompletedTasks();
 
           const { back } = await inquirer.prompt([
             {
