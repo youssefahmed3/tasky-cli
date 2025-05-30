@@ -51,3 +51,17 @@ cd task-cli-app
 npm install
 ```
 
+## Starting The App
+
+### 1. Start The App Normally
+```bash
+npm run start
+```
+
+### 2. Start The App in Dev Mode (nodmon for Auto-Starting)
+```bash
+npm run dev
+```
+
+
+
