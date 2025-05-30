@@ -1,38 +1,53 @@
 # 📝 Tasky CLI App
 
-A simple command-line To-Do application built with Node.js. Users can add, list, complete, and delete tasks interactively using Inquirer prompts, with data persistence powered by LowDB.
+A simple and interactive command-line To-Do application built with Node.js. This app allows you to manage tasks by adding, listing, completing, and deleting them, all from your terminal.
+
+---
 
 ## 🚀 Features
 
-- Add new tasks with title, description, priority, and optional due date.
-- List all tasks in a clean table format with:
-  - Priority labels
-  - Relative created time (e.g., "2 days ago")
-  - Human-readable due date (or "N/A")
-  - Visual completion status (checkbox style)
-- Mark tasks as complete.
-- Delete tasks.
-- Data saved locally in a JSON file (`db.json`).
-- Uses UUIDs for task identification.
-- Validations using Zod.
-- Spinners using Ora for enhanced user experience.
+- ✅ Add tasks with:
+  - Title
+  - Description
+  - Priority (High, Medium, Low)
+  - Optional Due Date
+- 📋 List tasks in a table format:
+  - Priority shown as labels
+  - Created date shown in relative time (e.g. "1 day ago")
+  - Due date in DD-MM-YYYY format or `N/A`
+  - Completion status with checkboxes (☑ / ☐)
+- ✔️ Mark tasks as complete
+- 🗑️ Delete tasks
+- 💾 Persistent storage using a local JSON file
+- ✅ Validated user input using Zod
+- 🔄 Spinner feedback using Ora
 
-## 📦 Tech Stack
+---
+
+## 🧰 Tech Stack
 
 - [Node.js](https://nodejs.org/)
-- [Inquirer](https://www.npmjs.com/package/inquirer)
-- [LowDB](https://www.npmjs.com/package/lowdb)
-- [Zod](https://www.npmjs.com/package/zod)
-- [Day.js](https://day.js.org/)
-- [Ora (spinner)](https://www.npmjs.com/package/ora)
-- [cli-table3](https://www.npmjs.com/package/cli-table3)
+- [Inquirer](https://www.npmjs.com/package/inquirer) – CLI interaction
+- [LowDB](https://www.npmjs.com/package/lowdb) – JSON database
+- [Zod](https://zod.dev/) – Schema validation
+- [Day.js](https://day.js.org/) – Date manipulation
+- [cli-table3](https://www.npmjs.com/package/cli-table3) – Display tables in terminal
+- [Ora](https://www.npmjs.com/package/ora) – Loading spinners
+- [UUID](https://www.npmjs.com/package/uuid) – Unique task IDs
 
-## 📸 Preview
+---
+
+## 📦 Installation
+
+### 1. Clone the repository
 
 ```bash
-? What would you like to do? (Use arrow keys)
-❯ Add Task
-  List Tasks
-  Complete Task
-  Delete Task
-  Exit
+git clone https://github.com/your-username/task-cli-app.git
+cd task-cli-app
+```
+### 2. Install All The Dependencies 
+
+```bash
+npm install
+```
+
